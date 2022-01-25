@@ -94,16 +94,15 @@ const MainNavigator = createDrawerNavigator(
     }
 )
 
-const AppNavigator = createAppContainer(MainNavigator);
+const AppNavigator = createAppContainer(DirectoryNavigator);
 class Main extends Component {
     render() {
         return (
-            <View 
+            <View
                 style={{
                     flex: 1,
                     paddingTop: Platform.OS === 'ios' ? 0 : Constants.statusBarHeight
-                    }}
-            >
+            }}>
                 <AppNavigator />
             </View>
         );
